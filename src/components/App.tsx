@@ -1,13 +1,13 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
-
+import HomePage from '../components/homepage/homepage'
 
 
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
     return (
-     
+     <HomePage/>
     );
   }
 }
