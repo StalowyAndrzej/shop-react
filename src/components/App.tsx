@@ -1,6 +1,6 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
-import HomePage from '../components/homepage/homepage'
+import HomePage from '../pages/homepage/homepage'
 
 
 
