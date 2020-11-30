@@ -74,6 +74,7 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.1.6",
     "styled-components": "^5.2.1"
   }
 }
