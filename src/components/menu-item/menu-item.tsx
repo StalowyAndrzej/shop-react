@@ -1,13 +1,14 @@
-import React, { FunctionComponent } from "react";
+import React, { FC } from "react";
 
 import "./menu-item.styles.scss";
 
 interface IProps {
   title: string;
+  imageUrl: string;
 }
 
-const MenuItem: FunctionComponent<IProps> = ({ title }) => (
-  <div className="menu-item">
+const MenuItem: FC<IProps> = ({ title, imageUrl }) => (
+  <div style={{ backgroundImage: `url(${imageUrl})` }} className="menu-item">
     <div className="content">
       <h1 className="title">{title}</h1>
       <span className="subtitle">Buy now</span>
