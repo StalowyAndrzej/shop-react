@@ -10,8 +10,8 @@ module.exports = {
         project: "tsconfig.json",
         sourceType: "module",
         ecmaVersion: 2020,
-        tsconfigRootDir: __dirname, // imports React
-        sourceType: "module",
+        // tsconfigRootDir: __dirname, // imports React
+        // sourceType: "module",
         ecmaFeatures: {
             jsx: true // Allows for the parsing of JSX
         }

@@ -1,11 +1,12 @@
-/* eslint-disable react/prop-types */
 import React, { FunctionComponent } from "react";
 
-interface MenuProps {
+import "./menu-item.styles.scss";
+
+interface IProps {
   title: string;
 }
 
-const MenuItem: FunctionComponent<MenuProps> = ({ title }) => (
+const MenuItem: FunctionComponent<IProps> = ({ title }) => (
   <div className="menu-item">
     <div className="content">
       <h1 className="title">{title}</h1>

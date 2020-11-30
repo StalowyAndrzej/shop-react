@@ -1,29 +1,12 @@
-import React from "react";
+import React, { FC } from "react";
 import "./homepage.styles.scss";
 
-const HomePage = () => {
+import Directory from "../../components/directory/directory";
+
+const HomePage: FC = () => {
   return (
     <div className="homepage">
-      <div className="directory-menu">
-        <div className="menu-item">
-          <div className="content">
-            <h1 className="title">Hats</h1>
-            <span className="subtitle">Buy now</span>
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="content">
-            <h1 className="title">Jacket</h1>
-            <span className="subtitle">Buy now</span>
-          </div>
-        </div>
-        <div className="menu-item">
-          <div className="content">
-            <h1 className="title">Suit</h1>
-            <span className="subtitle">Buy now</span>
-          </div>
-        </div>
-      </div>
+      <Directory />
     </div>
   );
 };
