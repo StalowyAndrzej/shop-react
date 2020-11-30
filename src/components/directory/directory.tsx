@@ -5,7 +5,7 @@ import "./directory.styles.scss";
 
 interface IProps {}
 
-type Section = { title: string; imageUrl: string; id: number };
+type Section = { title: string; imageUrl: string; id: number; size?: string };
 
 interface IState {
   sections: Array<Section>;
@@ -35,13 +35,13 @@ class Directory extends React.Component<IProps, IState> {
         {
           title: "womens",
           imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-
+          size: "large",
           id: 4,
         },
         {
           title: "mens",
           imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-
+          size: "large",
           id: 5,
         },
       ],
@@ -51,8 +51,8 @@ class Directory extends React.Component<IProps, IState> {
   render(): JSX.Element {
     return (
       <div className="directory-menu">
-        {this.state.sections.map(({ title, imageUrl, id }) => (
-          <MenuItem title={title} key={id} imageUrl={imageUrl} />
+        {this.state.sections.map(({ title, imageUrl, id, size }) => (
+          <MenuItem title={title} key={id} imageUrl={imageUrl} size={size} />
         ))}
       </div>
     );
