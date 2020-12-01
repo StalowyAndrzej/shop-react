@@ -7,6 +7,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
+
   context: resolve(__dirname, '../../src'),
   module: {
     rules: [
@@ -48,6 +49,7 @@ module.exports = {
     'react': 'React',
     'react-dom': 'ReactDOM',
   },
+
   performance: {
     hints: false,
   },

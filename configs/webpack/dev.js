@@ -4,6 +4,11 @@ const webpack = require('webpack');
 const commonConfig = require('./common');
 
 module.exports = merge(commonConfig, {
+  resolve: {
+    alias: {
+      'react-dom': '@hot-loader/react-dom'
+    }
+  },
   mode: 'development',
   entry: [
     'react-hot-loader/patch', // activate HMR for React
@@ -12,6 +17,7 @@ module.exports = merge(commonConfig, {
     './index.tsx' // the entry point of our app
   ],
   devServer: {
+    historyApiFallback: true,
     hot: true, // enable HMR on the server
   },
   devtool: 'cheap-module-eval-source-map',
