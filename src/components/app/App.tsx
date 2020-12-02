@@ -1,8 +1,8 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
-import HomePage from '../../pages/homepage/homepage'
 import {Switch, Route} from 'react-router-dom'
-
+import HomePage from '../../pages/homepage/homepage'
+import ShopPage from '../../pages/shop/shoppage'
 
 const HatsPage:React.FC = () => (
   <div>
