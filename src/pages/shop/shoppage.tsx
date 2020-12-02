@@ -1,4 +1,7 @@
 import React from 'react';
+import '../../components/collection-preview/collection-preview'
+import CollectionPreview from '../../components/collection-preview/collection-preview';
+
 
 interface IProps {}
 
@@ -280,9 +283,13 @@ class ShopPage extends React.Component<IProps, IState>{
     }
 
     render(): JSX.Element{
+        const {collections} = this.state;
+
         return(
-            <div>
-                Shop PAge
+            <div className='shop-page'>
+                    {collections.map(({id, ...collectionsProps}) => (
+                        <CollectionPreview key={id} {...collectionsProps} />
+                    ))}
             </div>
         )
     }
