@@ -16,7 +16,7 @@ class App extends React.Component<Record<string, unknown>, undefined> {
     <div>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route  path='/hats' component={HatsPage} />
+        <Route path='/hats' component={HatsPage} />
      </Switch>
    </div>
     );
