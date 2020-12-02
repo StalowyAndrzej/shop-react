@@ -4,11 +4,6 @@ import {Switch, Route} from 'react-router-dom'
 import HomePage from '../../pages/homepage/homepage'
 import ShopPage from '../../pages/shop/shoppage'
 
-const HatsPage:React.FC = () => (
-  <div>
-    <h1>hello HATS</h1>
-  </div>
-)
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
@@ -16,7 +11,7 @@ class App extends React.Component<Record<string, unknown>, undefined> {
     <div>
       <Switch>
         <Route exact path='/' component={HomePage} />
-        <Route path='/hats' component={HatsPage} />
+        <Route path='/shop' component={ShopPage} />
      </Switch>
    </div>
     );
