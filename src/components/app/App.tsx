@@ -5,6 +5,7 @@ import "../../assets/scss/App.scss"
 import HomePage from "../../pages/homepage/homepage";
 import ShopPage from "../../pages/shop/shoppage";
 import Header from "../../components/header/header"
+import SignInAndSignUpPage from "../../pages/sign-in-and-sign-up/sign-in-and-sign-up";
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
@@ -14,6 +15,7 @@ class App extends React.Component<Record<string, unknown>, undefined> {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/signin" component={SignInAndSignUpPage} />
         </Switch>
       </div>
     );
