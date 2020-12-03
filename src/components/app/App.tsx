@@ -4,11 +4,13 @@ import { Switch, Route } from "react-router-dom";
 import "../../assets/scss/App.scss"
 import HomePage from "../../pages/homepage/homepage";
 import ShopPage from "../../pages/shop/shoppage";
+import Header from "../../components/header/header"
 
 class App extends React.Component<Record<string, unknown>, undefined> {
   public render() {
     return (
       <div className="app">
+        <Header/>
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
