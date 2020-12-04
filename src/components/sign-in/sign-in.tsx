@@ -37,6 +37,10 @@ class SignIn extends React.Component<IProps, ISignInState> {
     //     const {value, name} = e.target;
     //     this.setState({[name]: value})
     // }
+    private handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+       
+        this.setState({email: e.currentTarget.value});
+      }
 
     render(){
         return(
@@ -45,7 +49,7 @@ class SignIn extends React.Component<IProps, ISignInState> {
                 <span>Sign in with your email and password</span>
 
                 <form onSubmit={this.handleSubmit}>
-                    <input name='email'  type='email' value={this.state.email} required/><label>Email</label>
+                    <input name='email' onChange={this.handleChange} type='email' value={this.state.email} required/><label>Email</label>
                     <input name='password'  type='password' value={this.state.password} required/><label>Password</label>
                     <input type='submit' value='Submit form'/>
                 </form>
